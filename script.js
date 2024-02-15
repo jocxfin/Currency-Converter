@@ -37,26 +37,6 @@ document.getElementById("switchCurrency").onclick = () => {
     toCurrencySelectTag.value = fromValue;
 
 };
-numberInputField.addEventListener('input', () => {
-    const userEnteredAmount = numberInputField.value;
-
-    if(userEnteredAmount < 1 || isNaN(userEnteredAmount)) {
-        numberInputField.style.border = "1px solid red";
-        resultTag.style.color = "red";
-        resultTag.textContent = "Error: Only numeric values greater than 0 are allowed.";
-    }
-    else {
-        numberInputField.style.border = "1px solid gray";
-        resultTag.style.color = "black";
-        btn.textContent = "Processing: have patients...";
-
-        btn.disabled = true;
-        btn.style.color = "gray";
-        btn.style.cursor = "not-allowed";
-
-        convertAmount(userEnteredAmount);
-    }
-});
 
 // handle "click" event for conversion 
 btn.onclick = () => {
