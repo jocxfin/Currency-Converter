@@ -16,14 +16,14 @@ currency_list.forEach((currency) => {
     newElement.value = code;
     newElement.textContent = `${code} - ${countryName}`;
 
-    if (code === "USD")
+    if (code === "DKK") // Set default starting currency to DKK
         newElement.selected = true;
 
     fromCurrencySelectTag.append(newElement);
 
     const newElementTo = newElement.cloneNode(true);
 
-    if (code === "INR")
+    if (code === "EUR") // Set default target currency to EUR
         newElementTo.selected = true;
 
     toCurrencySelectTag.append(newElementTo);
